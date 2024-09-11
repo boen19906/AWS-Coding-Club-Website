@@ -19,6 +19,13 @@ export default function ProjectCards() {
                         src="images/turtle.jpg"
                         text="Personal Projects"
                         label="Fun"
+
+                        />
+
+                        <CardItem
+                        src="images/fun2.jpeg"
+                        text="Science Fair"
+                        label="Games, Apps"
                         
                         />
                     </ul>
