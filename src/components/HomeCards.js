@@ -1,11 +1,11 @@
 import React from "react";
 import CardItem from "./CardItem";
-import "./Cards.css";
+import "./HomeCards.css";
 
 export default function Cards() {
     return (
         <div className="cards">
-            <h1>Check out these epic gyatts</h1>
+            <h1>We're gonna do amazing things this year</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
