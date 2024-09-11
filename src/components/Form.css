@@ -2,14 +2,14 @@
     display: flex;
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: #edeaea;
 }
 
 .form-box {
-    height: 40vh;
+    height: 50vh;
     width: 80%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: #d3cece;

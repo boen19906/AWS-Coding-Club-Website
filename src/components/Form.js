@@ -7,7 +7,9 @@ export default function SignUpForm() {
     const navigate = useNavigate();
     
     const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
     const [tieColor, setTieColor] = useState("");
+
     const [signedUp, setSignedUp] = useState(false);
     console.log(tieColor);
 
@@ -21,12 +23,20 @@ export default function SignUpForm() {
                 <h1 className="sign-up">SIGN UP</h1>
                 <div className="form-container">
                  <div className="form-box">
+                    <form id="email-form">
+                         <label htmlFor="email">Email: </label>
+                         <input 
+                             type="text" 
+                             id="email" 
+                             required
+                             onChange={(event) => setEmail(event.target.value)}
+                         />
+                     </form>
                      <form id="name-form">
                          <label htmlFor="name">Name: </label>
                          <input 
                              type="text" 
                              id="name" 
-                             name="name" 
                              required
                              onChange={(event) => setName(event.target.value)}
                          />
@@ -45,6 +55,8 @@ export default function SignUpForm() {
                              <option value="yellow">Yellow</option>
                          </select>
                      </form>
+
+                     
      
                      <button onClick={handleSubmit}>Submit</button>
                  </div>
