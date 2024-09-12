@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Form.css";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+import { db } from "../firebase.js";
+import { collection, addDoc } from "firebase/firestore"; // Firestore methods
 
 export default function SignUpForm() {
     const navigate = useNavigate();
@@ -13,9 +15,19 @@ export default function SignUpForm() {
     const [signedUp, setSignedUp] = useState(false);
     console.log(tieColor);
 
-    const handleSubmit = () => {
-        setSignedUp(true);
-    }
+        const handleSubmit = async () => {
+            console.log("Submitting:", { name, email, tieColor }); // Log form data
+            try {
+                await addDoc(collection(db, "Students"), {
+                    name: name,
+                    email: email,
+                    tieColor: tieColor
+                });
+                setSignedUp(true);  // Set signedUp to true after successful write
+            } catch (error) {
+                console.error("Error adding document: ", error);  // Log the error
+            }
+        };
 
     if (!signedUp) {
         return (
