@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "./Form.css"; // Ensure this file has the CSS provided above
 import "../App.css";
-import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase.js"; 
 
 export default function SignUpForm() {
-    const navigate = useNavigate();
     const [name, setName] = useState("");
     const [tieColor, setTieColor] = useState("blue"); 
     const [email, setEmail] = useState(""); 
