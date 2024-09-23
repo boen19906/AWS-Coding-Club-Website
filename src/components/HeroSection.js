@@ -17,7 +17,7 @@ export default function HeroSection() {
                     });
                 }}
                 className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
-                    Get Started
+                    Learn More
                 </Button>
                 <Button
                 className="btns"

@@ -10,7 +10,7 @@ export default function Cards() {
                 <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem
-                        src="images/team.jpg"
+                        src="images/game.jpg"
                         text="Work on cool projects"
                         label="Teamwork"
                         path="/projects"
