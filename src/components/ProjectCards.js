@@ -17,8 +17,15 @@ export default function ProjectCards() {
 
                         <CardItem
                         src="images/game.jpg"
-                        text="Personal Projects"
-                        label="Fun"
+                        text="Unity Video Game Development "
+                        label="Unity"
+                        
+                        />
+
+                        <CardItem
+                        src="images/langs.png"
+                        text="Learn New Languages"
+                        label="Learn"
                         
                         />
                     </ul>
