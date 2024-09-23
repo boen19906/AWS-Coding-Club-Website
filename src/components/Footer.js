@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="social-icons">
                         <div className="social-icon-instagram">
                             <Link className="social-icons-link-instagram"
-                            to="https://www.instagram.com/awscodingclub/"
+                            to="https://www.instagram.com/aws_coding_club/"
                             target="_blank"
                             aria-label="Instagram">
                                 <i className="fab fa-instagram"/>
