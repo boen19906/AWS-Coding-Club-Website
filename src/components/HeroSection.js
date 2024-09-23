@@ -5,7 +5,7 @@ import "./HeroSection.css";
 export default function HeroSection() {
     return (
         <div className="hero-container">
-            <img src="/images/world.png"></img>
+            <img src="/images/world.png" alt="world"></img>
             <h1>Welcome to Coding Club!</h1>
             <p>Get ready for a great year!</p>
             <div className="hero-btn">
