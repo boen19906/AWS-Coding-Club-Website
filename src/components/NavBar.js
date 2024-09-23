@@ -63,7 +63,7 @@ function NavBar() {
                     </Link>
                 </li>
             </ul>
-            {button && <Button buttonStyle="btn--outline">Sign Up</Button>}
+            {button && <Button link="https://docs.google.com/forms/d/e/1FAIpQLSf_yNF2iSATLm01M7EPcqwdNPeaqMLr_LBGcz72OqQX7aGu6Q/viewform" buttonStyle="btn--outline">Sign Up</Button>}
         </nav>
         </>
         
