@@ -1,4 +1,4 @@
-video {
+img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -8,15 +8,16 @@ video {
 }
 
 .hero-container {
-    /*background: url("/Users/boen_liu/react-website/public/images/img-home.jpg") center/cover no-repeat;*/
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: contain;
     justify-content: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    
+    
 }
 
 .hero-container > h1 {
