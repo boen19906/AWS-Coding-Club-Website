@@ -5,7 +5,7 @@ import "./HeroSection.css";
 export default function HeroSection() {
     return (
         <div className="hero-container">
-            <video src="videos/world.mp4" autoPlay loop muted/>
+            
             <h1>Welcome to Coding Club!</h1>
             <p>Get ready for a great year!</p>
             <div className="hero-btn">
