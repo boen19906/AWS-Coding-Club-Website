@@ -1,6 +1,6 @@
 import React from "react";
 import CardItem from "./CardItem";
-import "./HomeCards.css";
+import "./Cards.css";
 
 export default function ProjectCards() {
     return (
@@ -9,14 +9,14 @@ export default function ProjectCards() {
                 <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem
-                        src="images/aurora.jpg"
+                        src="images/money.jpg"
                         text="Websites for Local Businesses"
                         label="Impact, Learning"
                      
                         />
 
                         <CardItem
-                        src="images/turtle.jpg"
+                        src="images/game.jpg"
                         text="Personal Projects"
                         label="Fun"
                         

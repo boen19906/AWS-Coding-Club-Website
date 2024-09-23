@@ -1,39 +1,43 @@
 import React, { useState } from "react";
-import "./Form.css";
+import "./Form.css"; // Ensure this file has the CSS provided above
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import { db } from "../firebase.js";
-import { collection, addDoc } from "firebase/firestore"; // Firestore methods
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase.js"; 
 
 export default function SignUpForm() {
     const navigate = useNavigate();
-    
     const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [tieColor, setTieColor] = useState("Blue");
-
+    const [tieColor, setTieColor] = useState("blue"); 
+    const [email, setEmail] = useState(""); 
     const [signedUp, setSignedUp] = useState(false);
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState(""); 
+
     const validateEmail = (email) => {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(String(email).toLowerCase());
     };
 
-    const handleSubmit = async () => {
-        console.log("Submitting:", { name, email, tieColor }); // Log form data
+    const handleSubmit = async (e) => {
+        e.preventDefault(); 
+        
         if (!validateEmail(email)) {
             setMessage("Invalid email format. Please try again."); 
             return;
         }
+
         try {
             await addDoc(collection(db, "Students"), {
                 name: name,
                 email: email,
                 tieColor: tieColor
             });
-            setSignedUp(true);  // Set signedUp to true after successful write
+
+            setSignedUp(true);
+            console.log("Form Submitted and Data Added:", { name, email, tieColor });
         } catch (error) {
-            console.error("Error adding document: ", error);  // Log the error
+            console.error("Error writing document: ", error);
+            setMessage("Error saving data. Please try again.");
         }
     };
 
@@ -42,8 +46,8 @@ export default function SignUpForm() {
             <>
                 <h1 className="sign-up">SIGN UP</h1>
                 <div className="form-container">
-                 <div className="form-box">
-                 <form id="signup-form" onSubmit={handleSubmit}>
+                    <div className="form-box">
+                        <form id="signup-form" onSubmit={handleSubmit}>
                             <label htmlFor="name">Name: </label>
                             <input 
                                 type="text" 
@@ -55,7 +59,7 @@ export default function SignUpForm() {
                             />
                             <br />
 
-                            <label htmlFor="email">Email: </label> {/* New Email Field */}
+                            <label htmlFor="email">Email: </label>
                             <input
                                 type="email"
                                 id="email"
@@ -80,34 +84,25 @@ export default function SignUpForm() {
                                 <option value="yellow">Yellow</option>
                             </select>
                             <br />
+                            
+                            <button type="submit">Submit</button>
                         </form>
 
-                     
-     
-                     <button onClick={handleSubmit}>Submit</button>
-                     {/* Displaying error message */}
-                     {message && <p className="error-message">{message}</p>}
-                 </div>
-            </div> 
+                        {message && <p className="error-message">{message}</p>}
+                    </div>
+                </div> 
             </>
-            
-         );
-    }
-    else {
+        );
+    } else {
         return (
             <div className="thanks">
-            <video autoPlay muted loop className="background-video">
-                <source src="videos/party.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            
-            <h1>{`Thank you ${name.split(' ')[0]}!`}</h1>
-            <h2>Our first meeting will be on Monday September 30th in Mr. Considine's Room!</h2>
-            
-            
+                <video autoPlay muted loop className="background-video">
+                    <source src="videos/party.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <h1>{`Thank you ${name.split(' ')[0]}!`}</h1>
+                <h2>Our first meeting will be on Monday, September 30th in Mr. Considine's Room!</h2>
             </div>
         );
     }
-
-    
 }

@@ -8,8 +8,8 @@ export default function Footer() {
             <section className="social-media">
                 <div className="social-media-wrapper">
                     <div className="footer-logo">
-                        <Link to="/" className="social-logo">
-                            Connect with Us <i className="fab fa-typo3"/>
+                        <Link to="https://www.instagram.com/"className="social-logo">
+                            Follow us on Instagram!
                         </Link>
                     </div>
                     <div className="social-icons">
@@ -19,22 +19,6 @@ export default function Footer() {
                             target="_blank"
                             aria-label="Instagram">
                                 <i className="fab fa-instagram"/>
-                            </Link>
-                        </div>
-                        <div className="social-icon-twitter">
-                            <Link className="social-icons-link-twitter"
-                            to="/"
-                            target="_blank"
-                            aria-label="Twitter">
-                                <i className="fab fa-twitter"/>
-                            </Link>
-                        </div>
-                        <div className="social-icon-facebook">
-                            <Link className="social-icons-link-facebook"
-                            to="/"
-                            target="_blank"
-                            aria-label="Twitter">
-                                <i className="fab fa-facebook"/>
                             </Link>
                         </div>
                     </div>

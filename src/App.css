@@ -20,7 +20,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #242424;
-  font-size: 100px;
+  font-size: 8vw;
+  margin-top:2vh;
 }
 
 .comps {
@@ -29,8 +30,18 @@
   background-size: fill;
   background-repeat: no-repeat;
   color: #242424;
-  font-size: 100px;
+  font-size: 8vw;
+  margin-top:2vh;
 }
+
+.divider {
+  border: none;
+  border-top: 5px solid #242424; /* Thick top border */
+  width: 60vw;                   /* Responsive width */
+  margin: 0 auto;               /* Center the divider */
+  
+}
+
 
 .sign-up {
 

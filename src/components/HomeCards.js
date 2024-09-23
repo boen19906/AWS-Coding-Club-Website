@@ -1,25 +1,25 @@
 import React from "react";
 import CardItem from "./CardItem";
-import "./HomeCards.css";
+import "./Cards.css";
 
 export default function Cards() {
     return (
         <div className="cards">
-            <h1>We're gonna do amazing things this year</h1>
+            <h1>We're gonna do amazing things this year!</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem
-                        src="images/aurora.jpg"
+                        src="images/team.jpg"
                         text="Work on cool projects"
-                        label="Gyatt"
+                        label="Teamwork"
                         path="/projects"
                         />
 
                         <CardItem
-                        src="images/turtle.jpg"
+                        src="images/USACO.png"
                         text="Compete in a individual and team competitions"
-                        label="Skibidi"
+                        label="Competitions"
                         path="/comps"
                         />
                     </ul>

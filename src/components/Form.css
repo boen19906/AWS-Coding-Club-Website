@@ -18,13 +18,16 @@
     justify-content: center;
     align-items: center;       /* Center elements horizontally */
     gap: 20px;                 /* Space between form elements */
+    padding: 2;
+}
+.signup-form {
+    padding: 1;
 }
 
 .form-box > form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .form-box > label, input, select, button {
@@ -40,9 +43,9 @@
     font-size: 20px;
 }
 
-
-.form-box > button {
-    width: 50%;
+.form-box button {
+    width: 110%;
+   
     background-color: #b29090;
     color: white;
     border: none;
@@ -50,6 +53,12 @@
     transition: background-color 0.3s;
 }
 
-.form-box > button:hover {
+.form-box button:hover {
     background-color: #a07777;
+}
+
+
+
+.thanks {
+    color: #242424;
 }

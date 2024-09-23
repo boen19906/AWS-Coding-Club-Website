@@ -36,8 +36,8 @@ function NavBar() {
         <nav className="navbar">
             <div className="navbar-container"></div>
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                AWS Coding Club <i className="fab fa-typo3"/>
-                </Link>
+                AWS Coding Club <i class="fa fa-code" aria-hidden="true"/>
+            </Link>
             <div className="menu-icon" onClick={handleClick}>
                 <i className={click ? "fa fa-window-close-o" : "fas fa-bars"}/>
             </div>
