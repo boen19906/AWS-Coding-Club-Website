@@ -58,7 +58,7 @@ function NavBar() {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
+                    <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf_yNF2iSATLm01M7EPcqwdNPeaqMLr_LBGcz72OqQX7aGu6Q/viewform" className="nav-links-mobile" onClick={closeMobileMenu}>
                         Sign Up
                     </Link>
                 </li>
